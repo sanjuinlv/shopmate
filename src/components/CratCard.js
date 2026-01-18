@@ -8,6 +8,7 @@ export function CartCard({ product }) {
   function handleRemove() {
     removeFromCart(product);
   }
+
   return (
     <div className="cartCard">
       <img src={image} alt={name} />

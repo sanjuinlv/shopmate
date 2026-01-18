@@ -4,12 +4,14 @@ import { useCart } from "../context/CartContext";
 
 export function Cart() {
   useTitle("Cart");
-  const {total, cartList} = useCart();
+  const { total, cartList } = useCart();
 
   return (
     <main>
       <section className="cart">
-        <h1>Cart Items: {cartList.length} / ${total}</h1>
+        <h1>
+          Cart Items: {cartList.length} / ${total}
+        </h1>
         {cartList.map((product) => (
           <CartCard key={product.id} product={product} />
         ))}
