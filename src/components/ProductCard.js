@@ -8,14 +8,10 @@ export function ProductCard({ product }) {
   const [isInCart, setIsInCart] = useState();
 
   useEffect(() => {
-    const productIsInCart = cartList.find((item) => item.id === product.id);
+    const productIsInCart = cartList.find((item) => item.id === id);
     if (productIsInCart) setIsInCart(true);
     else setIsInCart(false);
   }, [cartList, id]);
-
-  function handleAdd() {
-    addToCart(product);
-  }
 
   return (
     <div className="productCard">
